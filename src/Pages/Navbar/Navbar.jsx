@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -8,6 +8,20 @@ import "react-toastify/dist/ReactToastify.css";
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   const { displayName, photoURL } = user || {};
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  // Step 2: Toggle dark mode
+  const toggleDarkMode = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   const handleLogout = () => {
     logout()
@@ -148,7 +162,13 @@ const Navbar = () => {
               </Link>
             </button>
           )}
+          <div className="flex justify-end items-center">
+            <button onClick={toggleDarkMode} className="btn btn-sm">
+              {theme === "dark" ? "Light" : "Dark"}
+            </button>
+          </div>
         </div>
+
         <ToastContainer></ToastContainer>
       </div>
     </div>

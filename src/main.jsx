@@ -10,6 +10,9 @@ import ErrorPage from "./Components/ErrorPage/ErrorPage";
 
 import AuthProvider from "./Provider/AuthProvider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import AddProduct from "./Pages/AddProduct/AddProduct";
+import MyCart from "./Pages/MyCart/MyCart";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +23,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/serviceData.json"),
       },
       {
         path: "/login",
@@ -29,6 +31,26 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/add-product",
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/cart",
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/product-details",
+        element: <ProductDetails></ProductDetails>,
       },
     ],
   },
