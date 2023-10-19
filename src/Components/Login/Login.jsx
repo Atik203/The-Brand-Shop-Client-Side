@@ -22,7 +22,7 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        const use = result.user;
+        const user = result.user;
         navigate(location?.state ? location.state : "/");
         toast.success("Login Successfully", {
           position: "top-right",
@@ -165,7 +165,7 @@ const Login = () => {
               <input
                 type="submit"
                 value="Login"
-                className="btn text-white bg-red-500 text-center"
+                className="btn text-white bg-green-500 text-center"
               />
             </div>
           </form>

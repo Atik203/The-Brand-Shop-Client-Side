@@ -38,6 +38,26 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/add-product"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-green-500 underline" : ""
+          }
+        >
+          Add Product
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/cart"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-green-500 underline" : ""
+          }
+        >
+          My Cart
+        </NavLink>
+      </li>
 
       <li>
         <NavLink
@@ -111,7 +131,7 @@ const Navbar = () => {
                 <button>
                   <Link
                     onClick={handleLogout}
-                    className="btn btn-primary text-white border-none hover:text-white hover:bg-gray-400 bg-red-500"
+                    className="btn btn-primary text-white border-none hover:text-white hover:bg-gray-400 bg-green-500"
                   >
                     Logout
                   </Link>
@@ -122,7 +142,7 @@ const Navbar = () => {
             <button>
               <Link
                 to={"/login"}
-                className="btn btn-primary text-white border-none hover:text-white hover:bg-gray-400 bg-red-500"
+                className="btn btn-primary text-white border-none hover:text-white hover:bg-gray-400 bg-green-500"
               >
                 Login
               </Link>

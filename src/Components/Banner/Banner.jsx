@@ -7,8 +7,10 @@ const Banner = () => {
     <div className="w-11/12 mx-auto ">
       <div className="relative">
         <img
-          src={"https://i.ibb.co/HhPdhJ8/banner.jpg"}
-          className="h-[300px] md:h-[400px] lg:h-[650px] w-full transition-opacity opacity-70"
+          src={
+            "https://i.ibb.co/QcfQwgw/christopher-gower-a-Xa21cf7r-Y-unsplash.jpg"
+          }
+          className="h-[300px] md:h-[400px] lg:h-[650px] w-full transition-opacity opacity-50"
         />
       </div>
       <div
@@ -16,7 +18,7 @@ const Banner = () => {
         data-aos="fade-up"
         data-aos-duration="2000"
       >
-        <h1 className="text-2xl md:text-3xl my-5 lg:text-5xl text-center text-red-500 font-bold">
+        <h1 className="text-2xl md:text-3xl my-5 lg:text-5xl text-center text-green-500 font-bold">
           Elevate Your Shopping <br /> Experience
         </h1>
         <h3 className="text-center font-medium text-base md:text-xl">
