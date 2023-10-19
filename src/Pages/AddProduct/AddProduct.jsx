@@ -4,6 +4,24 @@ const AddProduct = () => {
   const handleProduct = (e) => {
     e.preventDefault();
     const form = e.target;
+    const name = form.name.value;
+    const brand = form.brand.value;
+    const type = form.type.value;
+    const details = form.details.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const photo = form.photo.value;
+
+    const product = {
+      name,
+      brand,
+      type,
+      details,
+      price,
+      rating,
+      photo,
+    };
+    console.log(product);
   };
 
   return (
@@ -66,7 +84,7 @@ const AddProduct = () => {
             <input
               type="text"
               name="rating"
-              placeholder="Rating"
+              placeholder="Rating (1-5)"
               className="input input-bordered w-full max-w-sm"
             />
           </div>
