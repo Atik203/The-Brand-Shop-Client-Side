@@ -3,7 +3,6 @@ import ProductDetailsCard from "../../Components/ProductDetailsCard/ProductDetai
 
 const ProductDetails = () => {
   const products = useLoaderData() || [];
-  console.log(products);
 
   return (
     <div className="w-11/12 mx-auto mt-1">
@@ -58,7 +57,7 @@ const ProductDetails = () => {
       </div>
       <div className="mt-20 mb-20 grid grid-cols-1 lg:grid-cols-4 items-center gap-12 lg:gap-6 mx-auto">
         {products.length > 0 ? (
-          products.map((product) => (
+          products?.map((product) => (
             <ProductDetailsCard
               product={product}
               key={product._id}

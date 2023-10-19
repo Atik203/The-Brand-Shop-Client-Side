@@ -10,7 +10,7 @@ const ProductDetailsCard = ({ product }) => {
         <input
           key={i}
           type="radio"
-          name={`rating-${product._id}`} // Use a unique name for each product
+          name={`rating-${product._id}`}
           className={`mask mask-star-2 ${
             i <= rating ? "bg-orange-400" : "bg-orange-200"
           }`}
@@ -30,7 +30,7 @@ const ProductDetailsCard = ({ product }) => {
           <h2 className="card-title">Name: {name}</h2>
           <h2 className="">Type: {type}</h2>
           <h2 className="">Brand: {brand}</h2>
-          <p>Price: {price}</p>
+          <p>Price: {price}$</p>
           <div className="rating">{renderRatingStars()}</div>
           <div className="flex justify-between items-center mt-2">
             <div className="">
