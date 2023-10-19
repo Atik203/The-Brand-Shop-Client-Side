@@ -1,4 +1,10 @@
+import { useLoaderData } from "react-router-dom";
+import ProductDetailsCard from "../../Components/ProductDetailsCard/ProductDetailsCard";
+
 const ProductDetails = () => {
+  const products = useLoaderData() || [];
+  console.log(products);
+
   return (
     <div className="w-11/12 mx-auto mt-1">
       <div className="carousel w-full h-[350px] lg:h-[700px]">
@@ -50,7 +56,20 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className="mt-20 mb-20 grid grid-cols-1 lg:grid-cols-4 items-center gap-12 lg:gap-6 mx-auto">
+        {products.length > 0 ? (
+          products.map((product) => (
+            <ProductDetailsCard
+              product={product}
+              key={product._id}
+            ></ProductDetailsCard>
+          ))
+        ) : (
+          <div className="text-center col-span-4 flex justify-center">
+            <img src="https://evgracias.com/images/no-products.jpg" alt="" />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
