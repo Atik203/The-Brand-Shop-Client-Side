@@ -1,4 +1,6 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddProduct = () => {
   const handleProduct = (e) => {
@@ -22,13 +24,36 @@ const AddProduct = () => {
       photo,
     };
     console.log(product);
+    fetch("http://localhost:5000/product", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast.success("Added Successfully", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      });
   };
 
   return (
-    <div className="w-11/12 mx-auto">
-      <h1 className="mt-10 text-2xl font-bold text-center">Add New Product</h1>
+    <div className="w-11/12 mx-auto mb-20">
+      <h1 className="mt-10 text-2xl font-bold text-center mb-8">
+        Add New Product
+      </h1>
       <form onSubmit={handleProduct} className="bg-gray-300 p-4">
-        <div className="flex flex-col lg:flex-row items-center justify-around">
+        <div className="flex flex-col lg:flex-row items-center justify-around mt-2">
           <div className="form-control w-full max-w-sm">
             <label className="label">
               <span className="label-text font-medium">Product Name</span>
@@ -110,12 +135,13 @@ const AddProduct = () => {
             className="textarea textarea-bordered w-full max-w-5xl h-32"
           ></textarea>
         </div>
-        <div className="form-control w-full max-w-5xl mx-auto mt-6">
+        <div className="form-control w-full max-w-5xl mx-auto mt-6 mb-6">
           <button className="btn bg-green-500 text-white hover:text-black">
             Add Product
           </button>
         </div>
       </form>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

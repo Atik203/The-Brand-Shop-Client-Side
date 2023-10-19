@@ -10,8 +10,6 @@ const Home = () => {
       .then((data) => setBrands(data));
   }, []);
 
-  console.log(brands);
-
   return (
     <div>
       <Banner></Banner>
@@ -24,8 +22,8 @@ const Home = () => {
         discover the best that these brands have to offer.
       </p>
       <div className="mt-10 mb-20 grid grid-cols-3 lg:flex justify-center gap-4 lg:gap-10 items-center w-11/12 mx-auto">
-        {brands.map((brand) => (
-          <BrandCard brand={brand} key={brand.id}></BrandCard>
+        {brands.map((abrand) => (
+          <BrandCard abrand={abrand} key={abrand.id}></BrandCard>
         ))}
       </div>
     </div>
