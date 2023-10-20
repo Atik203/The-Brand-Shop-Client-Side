@@ -275,7 +275,7 @@ const Home = () => {
                           </p>
                         </div>
                       </div>
-                      <p className="leading-normal text-gray-300 text-md">
+                      <p className="leading-normal text-gray-300 text-md h-72">
                         The Brand Shop has consistently exceeded my
                         expectations. The moment I stepped into the store, I was
                         surrounded by a wide array of premium brands and
@@ -314,7 +314,7 @@ const Home = () => {
                           <p className="text-gray-500 text-md">CEO of Apple</p>
                         </div>
                       </div>
-                      <p className="leading-normal text-gray-300 text-md">
+                      <p className="leading-normal text-gray-300 text-md h-72">
                         The Brand Shop is a truly exceptional place. The moment
                         I walked in, I was welcomed by a fantastic array of
                         top-notch products and outstanding customer service.
@@ -356,7 +356,7 @@ const Home = () => {
                           </p>
                         </div>
                       </div>
-                      <p className="leading-normal text-gray-300 text-md">
+                      <p className="leading-normal text-gray-300 text-md h-72">
                         The Brand Shop is a hidden gem for brand aficionados. As
                         soon as I walked in, I was greeted by a chic and
                         inviting store layout. Their collection of brands and
@@ -396,7 +396,7 @@ const Home = () => {
                           <p className="text-gray-500 text-md">CEO of Google</p>
                         </div>
                       </div>
-                      <p className="leading-normal text-gray-300 text-md">
+                      <p className="leading-normal text-gray-300 text-md h-72">
                         I can't say enough good things about The Brand Shop.
                         From the minute I entered the store, I felt like I was
                         in brand heaven. The shop is a treasure trove of the
@@ -438,7 +438,7 @@ const Home = () => {
                           </p>
                         </div>
                       </div>
-                      <p className="leading-normal text-gray-300 text-md">
+                      <p className="leading-normal text-gray-300 text-md h-72">
                         The Brand Shop is my go-to destination for all things
                         brand-related. From the moment I entered, I was
                         impressed by the stylish and well-organized store
@@ -476,7 +476,7 @@ const Home = () => {
                           <p className="text-gray-500 text-md">CEO of PayPal</p>
                         </div>
                       </div>
-                      <p className="leading-normal text-gray-300 text-md">
+                      <p className="leading-normal text-gray-300 text-md h-72">
                         The Brand Shop is a brand lover's paradise. As soon as
                         you walk in, you're surrounded by a carefully curated
                         selection of the finest brands. What sets The Brand Shop

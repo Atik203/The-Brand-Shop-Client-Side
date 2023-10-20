@@ -8,19 +8,17 @@ import "react-toastify/dist/ReactToastify.css";
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   const { displayName, photoURL } = user || {};
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
-  // Step 2: Toggle dark mode
-  const toggleDarkMode = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
   const handleLogout = () => {
@@ -151,11 +149,13 @@ const Navbar = () => {
               </Link>
             </button>
           )}
-          <div className="flex justify-end items-center">
-            <button onClick={toggleDarkMode} className="btn btn-sm">
-              {theme === "dark" ? "Light" : "Dark"}
-            </button>
-          </div>
+
+          <input
+            className="toggle ml-2"
+            type="checkbox"
+            checked={theme === "dark"}
+            onChange={toggleTheme}
+          />
         </div>
 
         <ToastContainer></ToastContainer>

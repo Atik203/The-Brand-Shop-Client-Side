@@ -20,7 +20,7 @@ const MyCart = () => {
   };
 
   return (
-    <div className="my-20 w-11/12 mx-auto">
+    <div className="my-20 w-11/12 mx-auto min-h-screen">
       <h1 className="text-2xl font-bold text-center">Your Selected Product</h1>
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 items-center gap-12 lg:gap-6 mx-auto">
         {initialCarts !== null ? (
