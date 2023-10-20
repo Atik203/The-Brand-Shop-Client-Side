@@ -41,10 +41,13 @@ The Brand Shop is a feature-rich e-commerce web application that allows users to
 
    cd the-brand-shop
 
+   ```
+
 2. **Install Dependencies**: Install the required project dependencies to ensure all features work seamlessly.
 
    ```bash
    npm install
+   ```
 
 - Configure Firebase: Set up a Firebase project and add the Firebase configuration to the project to enable user authentication and other Firebase features.
 
@@ -54,6 +57,7 @@ The Brand Shop is a feature-rich e-commerce web application that allows users to
 
   ```bash
   npm start
+  ```
 
 ## Usage
 
@@ -66,7 +70,6 @@ The Brand Shop is a feature-rich e-commerce web application that allows users to
 - **Viewing and Managing the Cart**: The cart page allows users to view the items in their cart and update quantities or remove items. The cart updates in real-time.
 
 - **Admin Product Management**: Admin users can log in to add new products to the catalog, providing a streamlined process for expanding the product selection.
-
 
 ## Live Demo
 
