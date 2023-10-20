@@ -72,17 +72,6 @@ const Navbar = () => {
           My Cart
         </NavLink>
       </li>
-
-      <li>
-        <NavLink
-          to="/about"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-green-500 underline" : ""
-          }
-        >
-          About Us
-        </NavLink>
-      </li>
     </>
   );
 
