@@ -5,8 +5,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddProduct = () => {
   const { user } = useContext(AuthContext);
-  const email = user.email;
-  console.log(email);
+
   const handleProduct = (e) => {
     e.preventDefault();
     const form = e.target;
