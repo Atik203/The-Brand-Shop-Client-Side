@@ -11,7 +11,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="w-11/12 mx-auto">
       <Banner></Banner>
       <h1 className="text-xl lg:text-3xl font-bold mt-20 text-center">
         Our Most Popular Brands
@@ -21,7 +21,7 @@ const Home = () => {
         most beloved brands. From cutting-edge technology to stylish fashion,
         discover the best that these brands have to offer.
       </p>
-      <div className="mt-10 mb-20 grid grid-cols-3 lg:flex justify-center gap-4 lg:gap-10 items-center w-11/12 mx-auto">
+      <div className="mt-10 mb-20 grid grid-cols-3 lg:flex justify-center gap-4 lg:gap-10 items-center mx-auto">
         {brands.map((abrand) => (
           <BrandCard abrand={abrand} key={abrand.id}></BrandCard>
         ))}

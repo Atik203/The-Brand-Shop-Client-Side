@@ -1,17 +1,33 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Details = () => {
   const product = useLoaderData();
   const { _id, name, brand, photo, price, type, rating, details } = product;
 
+  const { user } = useContext(AuthContext);
+  const email = user.email;
+
   const handleCart = () => {
+    const newProduct = {
+      email,
+      name,
+      brand,
+      photo,
+      price,
+      type,
+      rating,
+      details,
+    };
+
     fetch("http://localhost:5000/cart", {
       method: "POST",
       headers: {
         "content-Type": "application/json",
       },
-      body: JSON.stringify(product),
+      body: JSON.stringify(newProduct),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -53,7 +69,7 @@ const Details = () => {
       <div className="w-2/6 mx-auto">
         <img src={photo} alt={name} className="w-full" />
       </div>
-      <h1 className="text-2xl font-bold lg:w-10/12 mx-auto px-4">
+      <h1 className="text-xl lg:text-2xl mt-4 font-bold lg:w-10/12 mx-auto px-4">
         Product Name: {name}
       </h1>
       <h1 className="text-lg font-medium lg:w-10/12 mx-auto px-4">

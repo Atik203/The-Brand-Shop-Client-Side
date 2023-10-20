@@ -64,7 +64,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/cart"
+          to={`/cart`}
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-green-500 underline" : ""
           }
@@ -116,7 +116,7 @@ const Navbar = () => {
           </div>
           <Link
             to={"/"}
-            className="text-xl md:text-3xl font-bold text-black-500"
+            className="text-lg md:text-3xl font-bold text-black-500"
           >
             <img
               width="60"
@@ -136,16 +136,16 @@ const Navbar = () => {
               <div className="mx-auto">
                 <img
                   src={photoURL}
-                  className="h-12 w-12 rounded-full ml-5"
+                  className="h-12 w-12 rounded-full ml-6"
                   alt=""
                 />
-                <h1>{displayName}</h1>
+                <h1 className="text-sm lg:text-base">{displayName}</h1>
               </div>
               <div>
                 <button>
                   <Link
                     onClick={handleLogout}
-                    className="btn btn-primary text-white border-none hover:text-white hover:bg-gray-400 bg-green-500"
+                    className="btn btn-primary text-sm text-white border-none hover:text-white hover:bg-gray-400 bg-green-500"
                   >
                     Logout
                   </Link>
@@ -156,7 +156,7 @@ const Navbar = () => {
             <button>
               <Link
                 to={"/login"}
-                className="btn btn-primary text-white border-none hover:text-white hover:bg-gray-400 bg-green-500"
+                className="btn btn-primary text-sm text-white border-none hover:text-white hover:bg-gray-400 bg-green-500"
               >
                 Login
               </Link>

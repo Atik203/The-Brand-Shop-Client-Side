@@ -1,8 +1,12 @@
-import React from "react";
+import { useContext } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddProduct = () => {
+  const { user } = useContext(AuthContext);
+  const email = user.email;
+  console.log(email);
   const handleProduct = (e) => {
     e.preventDefault();
     const form = e.target;
