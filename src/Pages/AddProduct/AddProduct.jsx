@@ -23,11 +23,11 @@ const AddProduct = () => {
       rating,
       photo,
     };
-    console.log(product);
+
     fetch("http://localhost:5000/product", {
       method: "POST",
       headers: {
-        "content-type": "application/json",
+        "content-Type": "application/json",
       },
       body: JSON.stringify(product),
     })

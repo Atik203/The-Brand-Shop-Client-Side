@@ -5,17 +5,29 @@ const Details = () => {
   const product = useLoaderData();
   const { _id, name, brand, photo, price, type, rating, details } = product;
 
-  const handleCart = (_id) => {
-    toast.success("Added in the cart Successfully", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+  const handleCart = () => {
+    fetch("http://localhost:5000/cart", {
+      method: "POST",
+      headers: {
+        "content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast.success("Added in the cart Successfully", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      })
+      .catch((error) => console.log(error));
   };
 
   const renderRatingStars = () => {
@@ -62,7 +74,7 @@ const Details = () => {
       </div>
       <div className="px-4 lg:w-10/12 mx-auto">
         <button
-          onClick={() => handleCart(_id)}
+          onClick={handleCart}
           className="btn bg-green-500 text-white hover:text-black mt-2"
         >
           Add To Cart
