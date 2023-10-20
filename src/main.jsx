@@ -49,13 +49,18 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:5000/cart`),
+        loader: () =>
+          fetch(
+            `https://brand-shop-server-je7nzalpk-atikurrahaman0304-gmailcom.vercel.app/cart`
+          ),
       },
       {
         path: "/product-details/:brand",
         element: <ProductDetails></ProductDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.brand}`),
+          fetch(
+            `https://brand-shop-server-je7nzalpk-atikurrahaman0304-gmailcom.vercel.app/product/${params.brand}`
+          ),
       },
       {
         path: "/details/:id",
@@ -65,7 +70,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://brand-shop-server-je7nzalpk-atikurrahaman0304-gmailcom.vercel.app/products/${params.id}`
+          ),
       },
       {
         path: "/update/:id",
@@ -75,7 +82,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://brand-shop-server-je7nzalpk-atikurrahaman0304-gmailcom.vercel.app/products/${params.id}`
+          ),
       },
     ],
   },

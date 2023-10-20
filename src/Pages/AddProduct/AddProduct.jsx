@@ -27,13 +27,16 @@ const AddProduct = () => {
       photo,
     };
 
-    fetch("http://localhost:5000/product", {
-      method: "POST",
-      headers: {
-        "content-Type": "application/json",
-      },
-      body: JSON.stringify(product),
-    })
+    fetch(
+      "https://brand-shop-server-je7nzalpk-atikurrahaman0304-gmailcom.vercel.app/product",
+      {
+        method: "POST",
+        headers: {
+          "content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

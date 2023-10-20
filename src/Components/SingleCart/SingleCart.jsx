@@ -14,9 +14,12 @@ const SingleCart = ({ cart, onDelete }) => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
-      fetch(`http://localhost:5000/cart/${id}`, {
-        method: "DELETE",
-      })
+      fetch(
+        `https://brand-shop-server-je7nzalpk-atikurrahaman0304-gmailcom.vercel.app/cart/${id}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
