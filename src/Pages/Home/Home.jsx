@@ -286,8 +286,7 @@ const Home = () => {
                         products I've purchased from The Brand Shop has been
                         exceptional. I keep coming back for more because of
                         their commitment to excellence and customer
-                        satisfaction. If you're in search of the best in brands,
-                        don't miss out on The Brand Shop.
+                        satisfaction.
                       </p>
                     </div>
                   </a>
