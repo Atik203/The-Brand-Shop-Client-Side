@@ -74,6 +74,7 @@ The Brand Shop is a feature-rich e-commerce web application that allows users to
 ## Live Demo
 
 Check out the live demo of the project at [The Brand Shop](http://strong-cows.surge.sh/). Experience the application's features and functionalities in action.
+Check out the server-side code of this project [Click Here](https://github.com/Atik203/The-Brand-Shop-Server-Side)
 
 ## License
 
