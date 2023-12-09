@@ -37,7 +37,7 @@ The Brand Shop is a feature-rich e-commerce web application that allows users to
 1. **Clone the Repository**: Begin by cloning the project repository to your local machine.
 
    ```bash
-   git clone https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-Atik203.git
+   git clone https://github.com/Atik203/The-Brand-Shop-Client-Side
 
    cd the-brand-shop
 
